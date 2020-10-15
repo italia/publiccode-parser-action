@@ -1,0 +1,17 @@
+name: 'Publiccode Parser Action'
+description: |
+    This action can be integrated in your CI configuration 
+    to have a constant validation of your publiccode.yml
+inputs:
+  publiccode:
+    description: 'publiccode.yml path'
+    required: true
+    default: 'publiccode.yml'
+outputs:
+  validation:
+    description: 'publiccode.yml validation output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.publiccode }}
