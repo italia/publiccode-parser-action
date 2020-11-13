@@ -2,6 +2,9 @@ name: 'Publiccode Parser Action'
 description: |
     This action can be integrated in your CI configuration 
     to have a constant validation of your publiccode.yml
+branding:
+  icon: 'align-right'
+  color: 'green'
 inputs:
   publiccode:
     description: 'publiccode.yml path'
