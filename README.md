@@ -59,3 +59,6 @@ This software is maintained by the
 
 Licensed under the EUPL.
 The version control system provides attribution for specific lines of code.
+
+## Remarks
+This GitHub Action is published in the Github Marketplace. As such, you can find the [Terms of Service here](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-marketplace-terms-of-service). Also, [here](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-marketplace-developer-agreement) you can find the GitHub Marketplace Developer Agreement. 
