@@ -25,13 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     name: publiccode validation
     steps:
-    - name: publiccode validation process
-      id: pcvalidation
-      uses: actions/publiccode-parser-action@v0.0.2-alpha
+    - uses: actions/checkout@v2
+    - uses: italia/publiccode-parser-action@v0.0.2-alpha
       with:
         publiccode: 'publiccode.yml' # relative path to your publiccode.yml
-    # Use the output from the `pcvalidation` step
-    - echo "Validation ${{ steps.pcvalidation.outputs.validation }}"
 ```
 
 ## Contributing
