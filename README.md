@@ -31,6 +31,31 @@ jobs:
         publiccode: 'publiccode.yml' # relative path to your publiccode.yml
 ```
 
+### Comments in PR
+
+This action can reports results in PR comments using the `comment-on-pr`
+parameter.
+
+Note that you need the GitHub token in the `REVIEWDOG_GITHUB_API_TOKEN`
+environment variable:
+
+```yml
+on: [pull_request]
+
+jobs:
+  publiccode_validation:
+    runs-on: ubuntu-latest
+    name: publiccode validation
+    steps:
+    - uses: actions/checkout@v2
+    - uses: italia/publiccode-parser-action@v0.0.2-alpha
+      with:
+        publiccode: 'publiccode.yml'
+        comment-on-pr: true
+      env:
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
+```
+
 ## Contributing
 
 Contributing is always appreciated.
