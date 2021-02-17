@@ -10,6 +10,10 @@ inputs:
     description: 'publiccode.yml path'
     required: true
     default: 'publiccode.yml'
+  comment-on-pr:
+    description: 'publiccode.yml path'
+    required: false
+    default: "false"
 outputs:
   validation:
     description: 'publiccode.yml validation output'
@@ -18,3 +22,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.publiccode }}
+    - ${{ inputs.comment-on-pr }}
