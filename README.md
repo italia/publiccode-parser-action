@@ -1,9 +1,9 @@
-# publiccode.yml parser action for Github
+# publiccode.yml parser action for GitHub
 
 [![Join the #publiccode channel](https://img.shields.io/badge/Slack%20channel-%23publiccode-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/CAM3F785T)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/) [![CircleCI](https://circleci.com/gh/italia/publiccode-parser-action.svg?style=svg)](https://circleci.com/gh/italia/publiccode-parser-action)
 
-A Github action based upon the [Go parser and validator](https://github.com/italia/publiccode-parser-go)
+A GitHub action based upon the [Go parser and validator](https://github.com/italia/publiccode-parser-go)
 for [publiccode.yml](https://github.com/italia/publiccode.yml) files.
 
 `publiccode.yml` is an international standard for describing public software, which
@@ -79,7 +79,7 @@ The version control system provides attribution for specific lines of code.
 
 ## Remarks
 
-This GitHub Action is published in the Github Marketplace.
+This GitHub Action is published in the GitHub Marketplace.
 As such, you can find the [Terms of Service here](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-marketplace-terms-of-service).
 Also, [here](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-marketplace-developer-agreement)
 you can find the GitHub Marketplace Developer Agreement.
