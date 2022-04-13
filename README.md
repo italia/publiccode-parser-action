@@ -26,7 +26,7 @@ jobs:
     name: publiccode validation
     steps:
     - uses: actions/checkout@v2
-    - uses: italia/publiccode-parser-action@v0.0.2-alpha
+    - uses: italia/publiccode-parser-action@v0.0.3-alpha
       with:
         publiccode: 'publiccode.yml' # relative path to your publiccode.yml
 ```
@@ -48,12 +48,12 @@ jobs:
     name: publiccode validation
     steps:
     - uses: actions/checkout@v2
-    - uses: italia/publiccode-parser-action@v0.0.2-alpha
+    - uses: italia/publiccode-parser-action@v0.0.3-alpha
       with:
         publiccode: 'publiccode.yml'
         comment-on-pr: true
       env:
-        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Contributing
