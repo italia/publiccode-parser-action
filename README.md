@@ -4,13 +4,13 @@
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/) [![CircleCI](https://circleci.com/gh/italia/publiccode-parser-action.svg?style=svg)](https://circleci.com/gh/italia/publiccode-parser-action)
 
 A GitHub action based upon the [Go parser and validator](https://github.com/italia/publiccode-parser-go)
-for [publiccode.yml](https://github.com/italia/publiccode.yml) files.
+for [publiccode.yml](https://github.com/publiccodeyml/publiccode.yml) files.
 
 `publiccode.yml` is an international standard for describing public software, which
 should be placed at the root of Free/Libre and Open Source software repositories.
 
 This parser performs syntactic and semantic validation according to the
-[official spec](https://docs.italia.it/italia/developers-italia/publiccodeyml-en/en/master/index.html).
+[official spec](https://yml.publiccode.tools).
 
 ## Examples
 
@@ -26,18 +26,17 @@ jobs:
     name: publiccode validation
     steps:
     - uses: actions/checkout@v2
-    - uses: italia/publiccode-parser-action@v0.0.3-alpha
+    - uses: italia/publiccode-parser-action@v1
       with:
         publiccode: 'publiccode.yml' # relative path to your publiccode.yml
+        comment-on-pr: true
+      env:
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-### Comments in PR
+### No comments in PR
 
-This action can reports results in PR comments using the `comment-on-pr`
-parameter.
-
-Note that you need the GitHub token in the `REVIEWDOG_GITHUB_API_TOKEN`
-environment variable:
+If you don't want this action to report results as comments in the pull request:
 
 ```yml
 on: [pull_request]
@@ -48,12 +47,9 @@ jobs:
     name: publiccode validation
     steps:
     - uses: actions/checkout@v2
-    - uses: italia/publiccode-parser-action@v0.0.3-alpha
+    - uses: italia/publiccode-parser-action@v1
       with:
         publiccode: 'publiccode.yml'
-        comment-on-pr: true
-      env:
-        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Contributing
