@@ -1,7 +1,7 @@
 # publiccode.yml parser action for GitHub
 
 [![Join the #publiccode channel](https://img.shields.io/badge/Slack%20channel-%23publiccode-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/CAM3F785T)
-[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/) [![CircleCI](https://circleci.com/gh/italia/publiccode-parser-action.svg?style=svg)](https://circleci.com/gh/italia/publiccode-parser-action)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
 A GitHub action based upon the [Go parser and validator](https://github.com/italia/publiccode-parser-go)
 for [publiccode.yml](https://github.com/publiccodeyml/publiccode.yml) files.
