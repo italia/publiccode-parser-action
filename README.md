@@ -18,7 +18,7 @@ Include this action in your repo by creating `.github/workflows/publiccode-valid
 and edit where needed:
 
 ```yml
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   publiccode_validation:
