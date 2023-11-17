@@ -14,16 +14,16 @@ This parser performs syntactic and semantic validation according to the
 
 ## Examples
 
-Include this action in your repo by creating `.github/workflows/publiccode-validation.yml`
+Include this action in your repo by creating `.github/workflows/publiccode-yml-validation.yml`
 and edit where needed:
 
 ```yml
 on: [pull_request]
 
 jobs:
-  publiccode_validation:
+  publiccode_yml_validation:
     runs-on: ubuntu-latest
-    name: publiccode validation
+    name: publiccode.yml validation
     steps:
     - uses: actions/checkout@v2
     - uses: italia/publiccode-parser-action@v1
@@ -42,9 +42,9 @@ If you don't want this action to report results as comments in the pull request:
 on: [pull_request]
 
 jobs:
-  publiccode_validation:
+  publiccode_yml_validation:
     runs-on: ubuntu-latest
-    name: publiccode validation
+    name: publiccode.yml validation
     steps:
     - uses: actions/checkout@v2
     - uses: italia/publiccode-parser-action@v1
