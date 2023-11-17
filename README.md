@@ -67,10 +67,10 @@ This software is maintained by the
 
 ## License
 
-© 2020 Dipartimento per la Trasformazione Digitale - Presidenza del Consiglio dei
+© 2020-present Dipartimento per la Trasformazione Digitale - Presidenza del Consiglio dei
 Ministri
 
-Licensed under the EUPL.
+Licensed under the EUPL v1.2.
 The version control system provides attribution for specific lines of code.
 
 ## Remarks
