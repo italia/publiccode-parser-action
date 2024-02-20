@@ -1,4 +1,4 @@
-name: 'Publiccode Parser Action'
+name: 'publiccode.yml parser and validation Action'
 description: |
     This action can be integrated in your CI configuration 
     to have a constant validation of your publiccode.yml
