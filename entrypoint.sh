@@ -4,7 +4,7 @@ set -o pipefail
 
 # comment-on-pr parameter from the action
 if [ "$2" == "true" ]; then
-    pcvalidate "$1" | reviewdog -efm="%f:%l:%c: %t%*[^:]: %m" -reporter=github-pr-review -tee
+    publiccode-parser "$1" | reviewdog -efm="%f:%l:%c: %t%*[^:]: %m" -reporter=github-pr-review -tee
 else
-    pcvalidate "$1"
-fi
+    publiccode-parser "$1"
+ fi
