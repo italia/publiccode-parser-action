@@ -25,18 +25,15 @@ jobs:
     runs-on: ubuntu-latest
     name: publiccode.yml validation
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
     - uses: italia/publiccode-parser-action@v1
       with:
-        publiccode: 'publiccode.yml' # relative path to your publiccode.yml
-        comment-on-pr: true
-      env:
-        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        publiccode: 'publiccode.yml'
 ```
 
-### No comments in PR
+### Comments in the PR
 
-If you don't want this action to report results as comments in the pull request:
+If you want this action to report results as inline comments in the pull request:
 
 ```yml
 on: [pull_request]
@@ -46,10 +43,13 @@ jobs:
     runs-on: ubuntu-latest
     name: publiccode.yml validation
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
     - uses: italia/publiccode-parser-action@v1
       with:
-        publiccode: 'publiccode.yml'
+        publiccode: 'publiccode.yml' # relative path to your publiccode.yml
+        comment-on-pr: true
+      env:
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Contributing
