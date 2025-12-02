@@ -1,4 +1,4 @@
-FROM italia/publiccode-parser-go:v5.2.1
+FROM italia/publiccode-parser-go:v5.2.3
 
 ARG REVIEWDOG_FILE=reviewdog_0.21.0_Linux_x86_64.tar.gz
 ARG REVIEWDOG_SHA256=ad5ce7d5ffa52aaa7ec8710a8fa764181b6cecaab843cc791e1cce1680381569
