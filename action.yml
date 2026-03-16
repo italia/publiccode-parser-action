@@ -14,6 +14,14 @@ inputs:
     description: 'publiccode.yml path'
     required: false
     default: "false"
+  no-network:
+    description: 'Disables checks that require network connections (URL existence and oEmbed). This makes validation much faster.'
+    required: false
+    default: "false"
+  no-external-checks:
+    description: 'Disables ALL checks that reference external resources such as remote URLs or local file existence. Implies --no-network'
+    required: false
+    default: "false"
 outputs:
   validation:
     description: 'publiccode.yml validation output'
@@ -23,3 +31,5 @@ runs:
   args:
     - ${{ inputs.publiccode }}
     - ${{ inputs.comment-on-pr }}
+    - ${{ inputs.no-network }}
+    - ${{ inputs.no-external-checks }}
