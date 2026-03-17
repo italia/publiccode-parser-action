@@ -52,6 +52,28 @@ jobs:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+### Skipping network checks
+
+To disable all checks that reference external resources, including remote URLs
+and local files (e.g. `logo: img/logo.svg`, `screenshots: [img/screen.png]`):
+
+```yml
+- uses: italia/publiccode-parser-action@v1
+  with:
+    publiccode: 'publiccode.yml'
+    no-external-checks: true
+```
+
+To only skip checks that require network connections (URL reachability and
+oEmbed) while still checking that local files exist in the repository:
+
+```yml
+- uses: italia/publiccode-parser-action@v1
+  with:
+    publiccode: 'publiccode.yml'
+    no-network: true
+```
+
 ## Contributing
 
 Contributing is always appreciated.
