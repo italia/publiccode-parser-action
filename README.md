@@ -3,7 +3,7 @@
 [![Join the #publiccode channel](https://img.shields.io/badge/Slack%20channel-%23publiccode-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/CAM3F785T)
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 
-A GitHub action based upon the [Go parser and validator](https://github.com/italia/publiccode-parser-go)
+A GitHub action based upon the [Go parser and validator](https://github.com/publiccodeyml/libpubliccode)
 for [publiccode.yml](https://github.com/publiccodeyml/publiccode.yml) files.
 
 `publiccode.yml` is an international standard for describing public software, which
